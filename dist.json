@@ -6,12 +6,12 @@
     "targets": [
         {
             "setoutdirforbuild": false,
-            "outdir": "Release\\v143\\RefreshDesktop\\",
-            "platform": "Win32"
+            "outdir": "Release\\v143\\RefreshDesktop\\x86",
+            "platform": "x86"
         },
         {
             "setoutdirforbuild": false,
-            "outdir": "Release\\v143\\RefreshDesktop\\",
+            "outdir": "Release\\v143\\RefreshDesktop\\x64",
             "platform": "x64"
         }
     ],
@@ -22,8 +22,14 @@
     	"char": "wchar"
     },
     "ShouldBeFiles": [
+	   "history.txt",
+       "LICENSE",
+       "README.md",
+       "RefreshDesktop.exe",
+       "RefreshDesktop.pdb"    
     ],
     "TotalFileCount": "exact",
+    "archivingdir": "Release\\v143\\RefreshDesktop",
     "archivedir": "C:\\Linkout",
     "remotedir": "https://ambiesoft.com/ffdav/uploads/RefreshDesktop/",
     "remotesha1": "https://ambiesoft.com/ffdav/uploads/getSha1.php?file=RefreshDesktop/{}",
