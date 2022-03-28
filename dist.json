@@ -1,0 +1,34 @@
+{
+    "name": "RefreshDesktop",
+    "solution": "RefreshDesktop.sln",
+    "targetproject": "zzzDist",
+    "configuration": "Release",
+    "targets": [
+        {
+            "setoutdirforbuild": false,
+            "outdir": "Release\\v143\\RefreshDesktop\\",
+            "platform": "Win32"
+        },
+        {
+            "setoutdirforbuild": false,
+            "outdir": "Release\\v143\\RefreshDesktop\\",
+            "platform": "x64"
+        }
+    ],
+    "gitrev": {
+    	"gits": ["C:/cygwin/bin/git.exe", "C:/local/msys2/usr/bin/git.exe"],
+    	"gitdirs": [".", "../lsMisc"],
+    	"outheader": "RefreshDesktop/gitrev.h",
+    	"char": "wchar"
+    },
+    "ShouldBeFiles": [
+    ],
+    "TotalFileCount": "exact",
+    "archivedir": "C:\\Linkout",
+    "remotedir": "https://ambiesoft.com/ffdav/uploads/RefreshDesktop/",
+    "remotesha1": "https://ambiesoft.com/ffdav/uploads/getSha1.php?file=RefreshDesktop/{}",
+    "ShouldNotBeFiles": [],
+    "ShouldBeOneOfThem": [],
+    "obtainverfrom": "history.txt",
+    "obtainverregex": "\\d+\\.\\d+\\.\\d+"
+}

@@ -5,6 +5,11 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RefreshDesktop", "RefreshDesktop\RefreshDesktop.vcxproj", "{582057CE-8D25-4FD1-9A48-CBD9C203F66A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zzzDist", "zzzDist\zzzDist.vcxproj", "{85916F87-E14C-4D2E-B23E-669876442D25}"
+	ProjectSection(ProjectDependencies) = postProject
+		{582057CE-8D25-4FD1-9A48-CBD9C203F66A} = {582057CE-8D25-4FD1-9A48-CBD9C203F66A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +26,14 @@ Global
 		{582057CE-8D25-4FD1-9A48-CBD9C203F66A}.Release|x64.Build.0 = Release|x64
 		{582057CE-8D25-4FD1-9A48-CBD9C203F66A}.Release|x86.ActiveCfg = Release|Win32
 		{582057CE-8D25-4FD1-9A48-CBD9C203F66A}.Release|x86.Build.0 = Release|Win32
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Debug|x64.ActiveCfg = Debug|x64
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Debug|x64.Build.0 = Debug|x64
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Debug|x86.ActiveCfg = Debug|Win32
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Debug|x86.Build.0 = Debug|Win32
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Release|x64.ActiveCfg = Release|x64
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Release|x64.Build.0 = Release|x64
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Release|x86.ActiveCfg = Release|Win32
+		{85916F87-E14C-4D2E-B23E-669876442D25}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
