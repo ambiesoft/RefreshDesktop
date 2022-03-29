@@ -148,12 +148,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\lsMisc\CommandLineParser.cpp" />
+    <ClCompile Include="..\..\lsMisc\stdosd\stdosd.cpp" />
+    <ClCompile Include="..\..\lsMisc\stdosd\stdosd_win.cpp" />
     <ClCompile Include="..\..\lsMisc\UrlEncode.cpp" />
     <ClCompile Include="..\..\lsMisc\UTF16toUTF8.cpp" />
     <ClCompile Include="RefreshDesktop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\lsMisc\CommandLineParser.h" />
+    <ClInclude Include="..\..\lsMisc\stdosd\stdosd.h" />
+    <ClInclude Include="..\..\lsMisc\stdosd\stdosd_exception.h" />
+    <ClInclude Include="..\..\lsMisc\stdosd\stdosd_literal.h" />
     <ClInclude Include="..\..\lsMisc\UrlEncode.h" />
     <ClInclude Include="..\..\lsMisc\UTF16toUTF8.h" />
     <ClInclude Include="gitrev.h" />

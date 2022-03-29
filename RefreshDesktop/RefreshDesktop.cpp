@@ -5,12 +5,15 @@
 #include <sstream>
 
 #include "../../lsMisc/CommandLineParser.h"
+#include "../../lsMisc/stdosd/stdosd.h"
 
 #include "gitrev.h"
 #include "RefreshDesktop.h"
 
 #pragma comment(lib, "Shell32.lib")
+#pragma comment(lib, "shlwapi.lib")
 
+using namespace Ambiesoft::stdosd;
 using namespace Ambiesoft;
 using namespace std;
 
@@ -21,6 +24,12 @@ wstring getAppNameAndVersion()
     return ss.str();
 }
 
+void ErrorExit(wstring error)
+{
+    MessageBox(nullptr, error.c_str(), APP_NAME, MB_ICONERROR);
+    exit(1);
+}
+
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
     _In_ LPWSTR    lpCmdLine,
@@ -28,7 +37,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 {
     CCommandLineParser parser(I18N(L"Refreshes desktop icons"), L"RefreshDesktop");
     int nWait = 0;
-    parser.AddOption(L"-wait",
+    parser.AddOption(L"--wait",
         ArgCount::ArgCount_One,
         &nWait,
         ArgEncodingFlags::ArgEncodingFlags_Default,
@@ -42,7 +51,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         I18N(L"Shows Help"));
 
     bool bShowGitrev = false;
-    parser.AddOption(L"-gitrev",
+    parser.AddOption(L"--gitrev",
         ArgCount::ArgCount_Zero,
         &bShowGitrev,
         ArgEncodingFlags_Default,
@@ -50,6 +59,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     
     parser.Parse();
 
+    if (parser.hadUnknownOption())
+    {
+        ErrorExit(stdFormat(I18N(L"Unknown Option(s):%s"), 
+            parser.getFirstUnknowOptionString().c_str()));
+    }
     if (bHelp)
     {
         MessageBox(nullptr, 
